@@ -15,18 +15,25 @@ int main()
 			max=A[i];
 		}
 	}
-	for(i=0;i<max;i++)
+	for(i=0;i<n;i++)
 	{
 		if(A[i]!=0)
 		{
 			B[A[i]]++;
-			printf("%d",B[A[i]]);
+		//	printf("%d ",B[i]);
 		}
 	}
-	for(i=1;i<=max;i++)
+	for(i=1;i<=n;i++)
+	{
+		if(B[i]>Max)
+		{
+			Max=A[i];
+		}
+	}
+/*	for(i=1;i<=max;i++)
 	{
 		printf("%d-%d\n",i,B[i]);
-	}/*
+	}
 	for(i=0;i<n;i++)
 	{
 		if(B[i]>Max)
@@ -35,6 +42,6 @@ int main()
 			F=i;
 		}
 	}*/
-//	printf("%d",max);
+	printf("%d",Max);
 	return 0;
 }
