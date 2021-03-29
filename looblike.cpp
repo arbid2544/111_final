@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int n,i,max=0,Max=0,F=0,X;
+	int n,i,max=0,Max=0,F=0,X,K=0,Y=0;
 	scanf("%d",&n);
 	int A[n],B[10000]={0},C[10000]={0};
 	for(i=0;i<n;i++)
@@ -46,7 +46,22 @@ int main()
     for(i=1;i<=n+max;i++)
 	{
 		if(C[i]!=0)
-		printf("%d ",C[i]);
+		{
+			K++;
+		//	printf("%d",C[i]);
+		}
+		//printf("%d ",C[i]);
+	} 
+	for(i=1;i<=max;i++)
+	{
+		if(C[i]!=0)
+		{
+			printf("%d ",C[i]);
+			Y++;
+		}
+		if(C[i]==10000)
+		break;
 	}  
+   // printf(",%d",Y);
 	return 0;
 }
