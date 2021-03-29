@@ -19,17 +19,22 @@ int main()
 	{
 		if(A[i]!=0)
 		{
-			B[i]++;
+			B[A[i]]++;
+			printf("%d",B[A[i]]);
 		}
 	}
+	for(i=1;i<=max;i++)
+	{
+		printf("%d-%d\n",i,B[i]);
+	}/*
 	for(i=0;i<n;i++)
 	{
-		if(B[i]>max)
+		if(B[i]>Max)
 		{
 			Max=B[i];
 			F=i;
 		}
-	}
-	printf("%d",F);
+	}*/
+//	printf("%d",max);
 	return 0;
 }
